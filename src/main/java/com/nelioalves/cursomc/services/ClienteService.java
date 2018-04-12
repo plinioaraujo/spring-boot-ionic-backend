@@ -15,7 +15,7 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
-	public Cliente buscar(Integer id){
+	public Cliente findById(Integer id){
 		 Optional<Cliente> cli = clienteRepository.findById(id);
 		 
 		 String msg = "Objeto não encontrado! ";

@@ -15,7 +15,7 @@ public class PedidoService {
 	@Autowired
 	private PedidoRepository pedidoRepository;
 	
-	public Pedido buscar(Integer id){
+	public Pedido findById(Integer id){
 		 Optional<Pedido> cli = pedidoRepository.findById(id);
 		 
 		 String msg = "Objeto não encontrado! ";
