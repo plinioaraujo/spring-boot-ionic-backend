@@ -41,4 +41,10 @@ public class ProdutoService {
 		
 	}
 	
+	public Produto find(Integer id) {
+		Optional<Produto> obj = produtoRepository.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Produto.class.getName()));
+	}
+	
 }
