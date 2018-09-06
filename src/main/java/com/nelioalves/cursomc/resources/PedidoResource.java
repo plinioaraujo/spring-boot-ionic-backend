@@ -18,8 +18,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.nelioalves.cursomc.domain.Pedido;
 import com.nelioalves.cursomc.services.PedidoService;
 
-
-
 @RestController
 @RequestMapping(value="/pedidos")
 public class PedidoResource {
