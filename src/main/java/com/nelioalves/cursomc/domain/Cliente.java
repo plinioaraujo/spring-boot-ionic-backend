@@ -145,6 +145,8 @@ public class Cliente implements Serializable {
 		return perfis.stream().map(x -> Perfil.toEnum(x)).collect(Collectors.toSet());
 	}
 	
+	private String imagemUrl;
+	
 	public void addPerfil(Perfil perfil){
 		perfis.add(perfil.getId());
 	}
@@ -172,6 +174,14 @@ public class Cliente implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public String getImagemUrl() {
+		return imagemUrl;
+	}
+
+	public void setImagemUrl(String imagemUrl) {
+		this.imagemUrl = imagemUrl;
 	}
 
 }
